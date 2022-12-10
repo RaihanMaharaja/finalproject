@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.raihansapplication.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.raihansapplication.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.raihansapplication.app.modules.appnavigation.ui.AppNavigationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.datapasangan.ui.DataPasanganActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.detailpegawaione.ui.DetailPegawaiOneActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.raihansapplication.app.modules.baganlogin.ui.BaganLoginActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.raihansapplication.app.modules.detaildivisi.ui.DetailDivisiActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.detailproject.ui.DetailProjectActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.dataanak.ui.DataAnakActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.listdivisi.ui.ListDivisiActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.listproject.ui.ListProjectActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.detailpegawai.ui.DetailPegawaiActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.listpegawai.ui.ListPegawaiActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.raihansapplication.app.modules.dashboard.ui.DashboardActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

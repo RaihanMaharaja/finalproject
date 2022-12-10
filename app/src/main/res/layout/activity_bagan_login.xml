@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="baganLoginVM" type="com.raihansapplication.app.modules.baganlogin.data.viewmodel.BaganLoginVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearBaganLogin"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageImageOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_164pxh"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_61pxv"
+            android:layout_width="@dimen/_170pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_image1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image1"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtSafirCorp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_35pxv"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{baganLoginVM.baganLoginModel.txtSafirCorp}"
+            style="@style/txtInterbold32" tools:text="@string/lbl_safir_corp"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtYourEmail"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_33pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{baganLoginVM.baganLoginModel.txtYourEmail}"
+            style="@style/txtPoppinsregular14" tools:text="@string/lbl_username"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnpassword"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+            <View android:id="@+id/linePassword"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_5pxv"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_17pxh"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_25pxv" android:layout_width="@dimen/_104pxh"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtPasswordOne"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{baganLoginVM.baganLoginModel.txtPasswordOne}"
+            style="@style/txtPoppinsregular14" tools:text="@string/lbl_password"/>
+        <LinearLayout android:id="@+id/linearRowpasswordTwo"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_5pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+            <View android:id="@+id/linePasswordTwo"
+                android:layout_height="@dimen/_5pxv"
+                android:layout_marginBottom="@dimen/_23pxv"
+                android:layout_marginStart="@dimen/_17pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_weight="0.85" android:layout_width="0dp"/>
+            <ImageView android:id="@+id/imageInfo"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_14pxh"
+                android:layout_marginStart="@dimen/_128pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="@dimen/_18pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_info"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_info"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearButton"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_37pxh"
+            android:layout_marginStart="@dimen/_37pxh"
+            android:layout_marginTop="@dimen/_52pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnMasuk"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_masuk"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_masuk"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listDivisiVM" type="com.raihansapplication.app.modules.listdivisi.data.viewmodel.ListDivisiVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearListDivisi"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPageTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_15pxv"
+                    android:layout_marginStart="@dimen/_159pxh"
+                    android:layout_marginTop="@dimen/_20pxv"
+                    android:layout_weight="0.74"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{listDivisiVM.listDivisiModel.txtPageTitle}"
+                    style="@style/txtInterextrabold20" tools:text="@string/lbl_divisi"/>
+                <ImageView android:id="@+id/imageEdit"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_marginBottom="@dimen/_18pxv"
+                    android:layout_marginEnd="@dimen/_24pxh"
+                    android:layout_marginStart="@dimen/_115pxh"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_edit"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_edit"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.appcompat.widget.SearchView
+            android:background="@drawable/rectangle_bg_gray_50_radius_22"
+            android:gravity="center_horizontal"
+            android:id="@+id/searchViewSearchBar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_width="match_parent"
+            android:theme="@style/searchViewSearchBar"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_search"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerListDivisi"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_37pxh}" tools:itemCount="5" tools:listitem="@layout/row_list_divisi"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearTabbar"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_203pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearHomeButton"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_27pxv"
+                android:layout_marginEnd="@dimen/_163pxh"
+                android:layout_marginStart="@dimen/_163pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylegray_500_47cornerRadius">
+                <ImageView android:id="@+id/imageHome"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    android:layout_width="@dimen/_15pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_home"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_home"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtTabName"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_6pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{listDivisiVM.listDivisiModel.txtTabName}"
+                    style="@style/txtIntersemibold10" tools:text="@string/lbl_home"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
